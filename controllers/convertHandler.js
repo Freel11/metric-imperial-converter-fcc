@@ -133,14 +133,16 @@ function ConvertHandler() {
         result = initNum / miToKm
         break
       case 'lbs':
-        result = initNum / lbsToKg
+        result = initNum * lbsToKg
         break
       case 'kg':
-        result = initNum * lbsToKg
+        result = initNum / lbsToKg
+        break
       default:
-        return 'something is broken'
+        return 'something is broken here'
     }
     
+
     return result.toFixed(5);
   };
   
